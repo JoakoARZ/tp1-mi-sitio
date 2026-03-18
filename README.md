@@ -1,7 +1,10 @@
-# Arzadum, Joaquin Jairo
+# TP1 - Mi Sitio Web
+**Apellido y Nombre:** 
+Arzadum, Joaquin Jairo
 # Trabajo Practico N1
-# 16/03/26
-# Descripcion del web:
+**Fecha:**
+16/03/26
+# Descripcion de mi sitio web:
 En el sitio web creado se encuentra una breve descripcion sobre mi, mis intereses y contacto. Tambien incluye una foto mia.
 **Tecnologias usadas**: HTML5 (para crear el sitio web) y CSS3 (para darle estilo a la pagina)
 # ¿por que es importante aprender a usar la terminal? 
