@@ -14,14 +14,14 @@ body {
 }
 /* ===== HEADER ===== */
 header {
-    background-color: #0c8b12; /* Azul primario */
+    background-color: #10b981; /* Azul primario */
     color: white;
     text-align: center;
     padding: 2rem; /* Espacio interno */
 }
 /* ===== NAV ===== */
 nav {
-    background-color: #10570a; /* Azul oscuro */
+    background-color: #065f46; /* Azul oscuro */
     padding: 1rem; 
     text-align: center;
 }
