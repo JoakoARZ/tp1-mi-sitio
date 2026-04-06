@@ -52,11 +52,16 @@ section {
     margin-bottom: 2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
 }/* Borde verde cuando el campo es válido */
-input:valid {
-    border: 2px solid #16A34A;
-    background-color: #F0FFF4;
+
+input:valid, textarea:valid, select:valid {
+    border: 2px solid #34d399; 
+    background-color: #ecfdf5; 
 }
-/* Solo mostrar error DESPUÉS de que el usuario interactúe */
+
+input:invalid, textarea:invalid, select:invalid {
+    border: 2px solid #ef4444; 
+    background-color: #fee2e2; 
+}
 input:not(:placeholder-shown):invalid {
     border: 2px solid #DC2626;
 }
