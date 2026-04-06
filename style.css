@@ -31,6 +31,12 @@ nav a {
     margin: 0 2rem; /* Espacio entre enlaces */
     font-weight: bold; /* Negrita */
 }
+
+.foto-perfil {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
 /* ===== FOOTER ===== */
 footer {
     background-color: #333;
