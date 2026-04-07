@@ -6,11 +6,13 @@
 }
 /* ===== TIPOGRAFIA BASE ===== */
 body {
+
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #333333;
     background-color: #d1fae5;
+
 }
 /* ===== HEADER ===== */
 header {
@@ -63,4 +65,68 @@ section {
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
+}/* Borde verde cuando el campo es válido */
+
+input:valid, textarea:valid, select:valid {
+    border: 2px solid #34d399; 
+    background-color: #ecfdf5; 
 }
+
+input:invalid, textarea:invalid, select:invalid {
+    border: 2px solid #ef4444; 
+    background-color: #fee2e2; 
+}
+input:not(:placeholder-shown):invalid {
+    border: 2px solid #DC2626;
+}
+
+/* Estilizar el campo con foco */
+input:focus {
+    outline: none;
+    border-color: #2E75B6;
+    box-shadow: 0 0 0 3px rgba(46, 117, 182, 0.2);
+}
+/* Campos del formulario */
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #065f46; /* Botón verde oscuro */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #034d34; /* Un poco más oscuro al pasar el mouse */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #34d399;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border: 2px solid #DC2626;
+    background-color: #FEF2F2;
+}
+
+.form-container {
+    max-width: 400px;   
+    margin: 0 auto;    
+    background-color: #34d399; 
+    padding: 20px; 
+    border-radius: 8px;
+}
+
