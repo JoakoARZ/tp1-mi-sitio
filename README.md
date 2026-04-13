@@ -5,9 +5,26 @@ Arzadum, Joaquin Jairo
 **Fecha:**
 16/03/26
 # Descripcion de mi sitio web
-En el sitio web creado se encuentra una breve descripcion sobre mi, mis intereses y contacto. Tambien incluye una foto mia.
+En el sitio web creado se encuentra una breve descripcion sobre mi, mis intereses y contacto. Tambien incluye una foto mia. Este proyecto corresponde a la materia Practicas Profesionalizantes II(PP2). Se trata de un sitio web personal desarrollado con HTML5 y CSS3, aplicando Flexbox, Grid y diseño responsive Mobile‑First. El objetivo es mostrar información sobre mí, mis intereses y proyectos, además de practicar buenas prácticas de desarrollo web.
+# Link del sitio web en vivo
+LINK:  https://joakoarz.github.io/tp1-mi-sitio/
 # Tecnologias usadas
-HTML5 (para crear el sitio web) y CSS3 (para darle estilo a la pagina)
-# Reflexion 
-Es importante aprender a usar la terminal ya que existen opciones que no estan disponible en la interfaz grafica. Ademas algunas tareas pueden realizarse de manera mas eficaz usando comandos que navegando por las ventanas. Tambien es mucho mas precisa que usar la interfaz grafica.
-**Ruta donde se instalo Git**: /mingw64/bin/git
+ HTML5: estructura semántica del sitio
+ CSS3: estilos y personalización visual
+ Flexbox: organización flexible de contenedores
+ Grid Layout: distribución de la galería y layout principal
+ Responsive Design: Mobile‑First con media queries
+ Git & GitHub: control de versiones, branches y deploy en GitHub Pages
+# Capturas de pantalla 
+### Mobile (iPhone 393px)
+
+![Mobile](images/mobile.png)
+![Mobile](images/mobile2.png)
+
+### Tablet (iPad 820px)
+![Tablet](images/tablet.png)
+![Tablet](images/tablet2.png)
+
+### Desktop (Laptop 1024px)
+![Desktop](images/desktop.png)
+![Desktop](images/desktop2.png)
