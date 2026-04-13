@@ -33,10 +33,12 @@ body {
 }
 /* ===== HEADER ===== */
 header {
-    background-color: var(--color-primary); /* Azul primario */
+    display: flex;
+    justify-content: space-between; /* logo a la izquierda, nav a la derecha */
+    align-items: center;
+    background-color: var(--color-primary);
+    padding: 1rem 2rem;
     color: white;
-    text-align: center;
-    padding: 2rem; /* Espacio interno */
     
 }
 h1 {
@@ -59,16 +61,30 @@ h3 {
   font-weight: 600;
   color: var(--color-heading);
 }
+.logo h1 {
+  font-family: var(--font-title);
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+.logo p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
 /* ===== NAV ===== */
 nav {
     background-color: var(--color-secondary); /* Azul oscuro */
     padding: 1rem; 
-    text-align: center;
+}
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 nav a {
     color: white;
     text-decoration: none; /* Elimina subrayado */
-    margin: 0 2rem; /* Espacio entre enlaces */
     font-weight: bold; /* Negrita */
     padding: 8px 12px;
     border-radius: 5px;
