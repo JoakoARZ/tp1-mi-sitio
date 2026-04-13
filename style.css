@@ -4,26 +4,42 @@
     padding: 0; /* Elimina relleno por defecto */
     box-sizing: border-box; /* Los bordes se incluyen en el ancho */
 }
+:root {
+  --color-primary: #74c69dff;
+  --color-secondary: #40916cff;
+  --color-accent: #b7e4c7ff;
+  --color-text: #081c15ff;
+  --color-bg: #d8f3dcff;
+  --radius: 8px;
+  --shadow: 0 2px 5px rgba(0,0,0,0.1);
+  --font-main: 'Poppins', sans-serif;
+  /* Colores validacion */
+  --color-valid: #2d6a4fff;
+  --color-valid-bg: #ecfdf5;
+  --color-invalid: #ef4444;
+  --color-invalid-bg: #fee2e2;
+  --color-focus: #2E75B6;
+  /* Colores adicionales */
+  --color-form: #95d5b2ff;
+}
 /* ===== TIPOGRAFIA BASE ===== */
 body {
-
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    color: #333333;
-    background-color: #d1fae5;
-
+    color: var(--color-text);
+    background-color: var(--color-bg);
 }
 /* ===== HEADER ===== */
 header {
-    background-color: #10b981; /* Azul primario */
+    background-color: var(--color-primary); /* Azul primario */
     color: white;
     text-align: center;
     padding: 2rem; /* Espacio interno */
 }
 /* ===== NAV ===== */
 nav {
-    background-color: #065f46; /* Azul oscuro */
+    background-color: var(--color-secondary); /* Azul oscuro */
     padding: 1rem; 
     text-align: center;
 }
@@ -37,17 +53,16 @@ nav a {
     transition: background-color 0.3s, color 0.3s; /* Transición suave para hover */
 }
 nav a:hover {
-  background-color: #34d399; /* color de fondo al pasar el mouse */
-  color: #065f46;            /* color del texto al pasar el mouse */
+  background-color: var(--color-primary); /* color de fondo al pasar el mouse */
+  color: var(--color-secondary);            /* color del texto al pasar el mouse */
 }
 .foto-perfil {
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-
 /* ===== FOOTER ===== */
 footer {
-    background-color: #333;
+    background-color: var(--color-secondary); /* Azul oscuro */
     color: white;
     text-align: center;
     padding: 1rem;
@@ -66,24 +81,21 @@ section {
     margin-bottom: 2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
 }/* Borde verde cuando el campo es válido */
-
 input:valid, textarea:valid, select:valid {
-    border: 2px solid #34d399; 
-    background-color: #ecfdf5; 
+    border: 2px solid var(--color-valid); 
+    background-color: var(--color-valid-bg); 
 }
-
-input:invalid, textarea:invalid, select:invalid {
-    border: 2px solid #ef4444; 
-    background-color: #fee2e2; 
+input:invalid:not(:placeholder-shown) {
+  border: 2px solid var(--color-invalid);
+  background-color: var(--color-invalid-bg);
 }
 input:not(:placeholder-shown):invalid {
-    border: 2px solid #DC2626;
+    border: 2px solid var(--color-invalid);
 }
-
 /* Estilizar el campo con foco */
 input:focus {
     outline: none;
-    border-color: #2E75B6;
+    border-color: var(--color-focus);
     box-shadow: 0 0 0 3px rgba(46, 117, 182, 0.2);
 }
 /* Campos del formulario */
@@ -93,9 +105,8 @@ input, textarea, select {
     border-radius: 6px;
     border: 1px solid #ccc;
 }
-
 button {
-    background-color: #065f46; /* Botón verde oscuro */
+    background-color: var(--color-secondary); /* Botón verde oscuro */
     color: white;
     padding: 10px;
     border: none;
@@ -103,30 +114,25 @@ button {
     cursor: pointer;
     font-weight: bold;
 }
-
 button:hover {
-    background-color: #034d34; /* Un poco más oscuro al pasar el mouse */
+    background-color: var(--color-valid); /* Un poco más oscuro al pasar el mouse */
 }
-
 form {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: #34d399;
+    background-color: var(--color-form);
     padding: 20px;
     border-radius: 8px;
 }
-
 input:invalid:not(:placeholder-shown) {
-    border: 2px solid #DC2626;
-    background-color: #FEF2F2;
+    border: 2px solid var(--color-invalid);
+    background-color: var(--color-invalid-bg);
 }
-
 .form-container {
     max-width: 400px;   
     margin: 0 auto;    
-    background-color: #34d399; 
+    background-color: var(--color-form); 
     padding: 20px; 
     border-radius: 8px;
 }
-
