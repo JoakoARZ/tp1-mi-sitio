@@ -5,23 +5,23 @@
     box-sizing: border-box; /* Los bordes se incluyen en el ancho */
 }
 :root {
-  --color-primary: #74c69dff;
-  --color-secondary: #40916cff;
-  --color-accent: #b7e4c7ff;
-  --color-text: #081c15ff;
-  --color-bg: #d8f3dcff;
-  --radius: 8px;
-  --shadow: 0 2px 5px rgba(0,0,0,0.1);
-  --font-title: 'Montserrat', sans-serif;
-  --font-body: 'Poppins', sans-serif;
-  /* Colores validacion */
-  --color-valid: #2d6a4fff;
-  --color-valid-bg: #ecfdf5;
-  --color-invalid: #ef4444;
-  --color-invalid-bg: #fee2e2;
-  --color-focus: #2E75B6;
-  /* Colores adicionales */
-  --color-form: #95d5b2ff;
+    --color-primary: #74c69dff;
+    --color-secondary: #40916cff;
+    --color-accent: #b7e4c7ff;
+    --color-text: #081c15ff;
+    --color-bg: #d8f3dcff;
+    --radius: 8px;
+    --shadow: 0 2px 5px rgba(0,0,0,0.1);
+    --font-title: 'Montserrat', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+    /* Colores validacion */
+    --color-valid: #2d6a4fff;
+    --color-valid-bg: #ecfdf5;
+    --color-invalid: #ef4444;
+    --color-invalid-bg: #fee2e2;
+    --color-focus: #2E75B6;
+    /* Colores adicionales */
+    --color-form: #95d5b2ff;
 }
 /* ===== TIPOGRAFIA BASE ===== */
 body {
@@ -42,45 +42,45 @@ header {
     
 }
 h1 {
-  font-family: var(--font-title);
-  font-size: 2.5rem; /* ~40px */
-  font-weight: 700;
-  color: var(--color-heading);
+    font-family: var(--font-title);
+    font-size: 2.5rem; /* ~40px */
+    font-weight: 700;
+    color: white;
 }
 
 h2 {
-  font-family: var(--font-title);
-  font-size: 1.8rem; /* ~29px */
-  font-weight: 600;
-  color: var(--color-heading);
+    font-family: var(--font-title);
+    font-size: 1.8rem; /* ~29px */
+    font-weight: 600;
+    color: var(--color-text);
 }
 
 h3 {
-  font-family: var(--font-title);
-  font-size: 1.3rem; /* ~21px */
-  font-weight: 600;
-  color: var(--color-heading);
+    font-family: var(--font-title);
+    font-size: 1.3rem; /* ~21px */
+    font-weight: 600;
+    color: var(--color-text);
 }
 .logo h1 {
-  font-family: var(--font-title);
-  font-size: 1.5rem;
-  margin-bottom: 0.3rem;
-}
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+} 
 .logo p {
-  font-family: var(--font-body);
-  font-size: 1rem;
+    font-family: var(--font-body);
+    font-size: 1rem;
 }
 /* ===== NAV ===== */
 nav {
-    background-color: var(--color-secondary); /* Azul oscuro */
+    background-color: var(--color-secondary);
     padding: 1rem; 
 }
 nav ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 nav a {
     color: white;
@@ -91,18 +91,17 @@ nav a {
     transition: background-color 0.3s, color 0.3s; /* Transición suave para hover */
 }
 nav a:hover {
-  background-color: var(--color-primary); /* color de fondo al pasar el mouse */
-  color: var(--color-secondary);            /* color del texto al pasar el mouse */
+    background-color: var(--color-primary); /* color de fondo al pasar el mouse */
+    color: var(--color-secondary);            /* color del texto al pasar el mouse */
 }
 .foto-perfil {
-  border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 /* ===== FOOTER ===== */
 footer {
     background-color: var(--color-secondary); /* Azul oscuro */
     color: white;
-    text-align: center;
     padding: 1rem;
 }
 /* ===== MAIN ===== */
@@ -118,17 +117,41 @@ section {
     padding: 2rem;
     margin-bottom: 2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra suave */
-}/* Borde verde cuando el campo es válido */
+}
+.cards-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1.5rem;
+    justify-content: center;
+}
+.card {
+    flex: 1 1 280px;       /* responsivo: mínimo 280px, luego se ajusta */
+    background-color: #fff;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+    transform: translateY(-4px); /* se levanta un poco */
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15); /* sombra más intensa */
+}
+.card h3 {
+    font-family: var(--font-title);
+    margin-bottom: 0.5rem;
+}
+.card p {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--color-text);
+}
 input:valid, textarea:valid, select:valid {
     border: 2px solid var(--color-valid); 
     background-color: var(--color-valid-bg); 
 }
 input:invalid:not(:placeholder-shown) {
-  border: 2px solid var(--color-invalid);
-  background-color: var(--color-invalid-bg);
-}
-input:not(:placeholder-shown):invalid {
     border: 2px solid var(--color-invalid);
+    background-color: var(--color-invalid-bg);
 }
 /* Estilizar el campo con foco */
 input:focus {
