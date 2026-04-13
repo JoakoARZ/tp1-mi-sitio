@@ -16,7 +16,7 @@ LINK:  https://joakoarz.github.io/tp1-mi-sitio/
 3. Flexbox: organización flexible de contenedores
 4. Grid Layout: distribución de la galería y layout principal
 5. Responsive Design: Mobile‑First con media queries
-6. Git & GitHub: control de versiones, branches y deploy en 7. GitHub Pages
+6. Git & GitHub: control de versiones, branches y deploy en GitHub Pages
 
 # Capturas de pantalla 
 ### Mobile (iPhone 393px)
