@@ -335,3 +335,51 @@ input:invalid:not(:placeholder-shown) {
   height: 60px;
   margin-bottom: 1rem;
 }
+/* ===== MOBILE-FIRST ===== */
+/* Base: celulares (sin media query) */
+/* Ya lo tienes: layout en grid, sidebar visible por defecto. 
+   Lo ajustamos para que sidebar esté oculto en mobile */
+.layout {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 columna */
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  min-height: 100vh;
+}
+
+.sidebar {
+  display: none; /* oculto en mobile */
+}
+
+/* ===== Breakpoint 1: Tablets (>=768px) ===== */
+@media (min-width: 768px) {
+  .layout {
+    grid-template-columns: 220px 1fr; /* 2 columnas */
+    grid-template-areas:
+      "header header"
+      "sidebar main"
+      "footer footer";
+  }
+
+  .sidebar {
+    display: block; /* visible */
+  }
+}
+
+/* ===== Breakpoint 2: Laptops (>=1024px) ===== */
+@media (min-width: 1024px) {
+  .layout {
+    max-width: 1200px;
+    margin: 0 auto; /* centrado */
+  }
+}
+
+/* ===== Breakpoint 3: Monitores grandes (>=1440px) ===== */
+@media (min-width: 1440px) {
+  .layout {
+    max-width: 1400px; /* más amplio */
+  }
+}
