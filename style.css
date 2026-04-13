@@ -242,7 +242,15 @@ input:invalid:not(:placeholder-shown) {
     background-color: var(--color-form); 
     padding: 20px; 
     border-radius: 8px;
-}/* ===== HERO SECTION ===== */
+}
+.terminos {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  white-space: nowrap;
+}
+/* ===== HERO SECTION ===== */
 .hero {
     display: flex;
     justify-content: center;
