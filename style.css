@@ -22,6 +22,7 @@
     --color-focus: #2E75B6;
     /* Colores adicionales */
     --color-form: #95d5b2ff;
+    --color-white: white;
 }
 /* ===== TIPOGRAFIA BASE ===== */
 body {
@@ -32,14 +33,14 @@ body {
     background-color: var(--color-bg);
 }
 /* ===== HEADER ===== */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: var(--color-primary);
-    padding: 1rem 2rem;
-    color: white;
-    
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-secondary);
+  padding: 1rem 2rem;
+  color: white;
 }
 h1 {
     font-family: var(--font-title);
@@ -59,7 +60,7 @@ h3 {
     font-weight: 600;
     color: var(--color-text);
 }
-.logo h1 {
+.header .logo h1 {
     font-family: var(--font-title);
     font-size: 1.5rem;
     margin-bottom: 0.3rem;
@@ -69,18 +70,24 @@ h3 {
     font-size: 1rem;
 }
 /* ===== NAV ===== */
-nav {
+.nav-header {
     background-color: var(--color-secondary);
     padding: 1rem; 
 }
-nav ul {
+.nav-sidebar {
+    background-color: var(--color-valid);
+    padding: 1rem; 
+}
+.header nav ul {
     display: flex;
+    flex-direction: row;
     gap: 1.5rem;
     list-style: none;
     margin: 0;
     padding: 0;
 }
-nav a {
+.header nav a {
+    display: block;
     color: white;
     text-decoration: none; /* Elimina subrayado */
     font-weight: bold; /* Negrita */
@@ -88,9 +95,34 @@ nav a {
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s; 
 }
-nav a:hover {
+.header nav a:hover {
     background-color: var(--color-primary);
     color: var(--color-secondary);
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+.nav-sidebar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-sidebar a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-sidebar a:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text);
 }
 .foto-perfil {
     border-radius: 50%;
@@ -122,8 +154,6 @@ footer {
 }
 /* ===== MAIN ===== */
 main {
-    max-width: 900px; /* Ancho maximo */
-    margin: 0 auto; /* Centrar horizontalmente */
     padding: 2rem;
 }
 /* ===== SECCIONES ===== */
@@ -142,7 +172,7 @@ section {
 }
 .card {
     flex: 1 1 280px;
-    background-color: #fff;
+    background-color: var(--color-white);
     border-radius: var(--radius);
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     padding: 1.5rem;
@@ -232,6 +262,7 @@ input:invalid:not(:placeholder-shown) {
     font-family: var(--font-body);
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    color: var(--color-text);
 }
 .cta-btn {
     background-color: var(--color-accent);
@@ -246,4 +277,35 @@ input:invalid:not(:placeholder-shown) {
     background-color: var(--color-valid);
     color: white;
     transform: scale(1.05);
+}
+.layout {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    min-height: 100vh;
+}
+
+/* Áreas */
+
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: var(--color-valid);
+    color: white;
+    padding: 1rem;
+    min-height: 100%;
+}
+
+.main {
+    grid-area: main;
+    padding: 2rem;
+    background-color: var(--color-bg);
+}
+
+.footer {
+    grid-area: footer;
 }
