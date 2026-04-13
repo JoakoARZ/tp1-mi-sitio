@@ -309,3 +309,29 @@ input:invalid:not(:placeholder-shown) {
 .footer {
     grid-area: footer;
 }
+.grid-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  justify-content: center;
+}
+
+.grid-gallery .card {
+  background-color: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grid-gallery .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.grid-gallery img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
